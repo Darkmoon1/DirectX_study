@@ -1,0 +1,4 @@
+﻿  WinMain.cpp
+d:\documents\github\directx_study\windows编程基础\windows编程基础\winmain.cpp(82): warning C4715: “WinMain”: 不是所有的控件路径都返回值
+  windows编程基础.vcxproj -> D:\Documents\GitHub\DirectX_study\windows编程基础\Debug\windows编程基础.exe
+  windows编程基础.vcxproj -> D:\Documents\GitHub\DirectX_study\windows编程基础\Debug\windows编程基础.pdb (Full PDB)
