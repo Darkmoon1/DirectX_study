@@ -1,7 +1,5 @@
 ﻿  WinMain.cpp
-  D3DUT.cpp
+  MyD3D.cpp
   正在生成代码...
-WinMain.obj : error LNK2005: "struct HWND__ * _hwnd" (?_hwnd@@3PAUHWND__@@A) 已经在 D3DUT.obj 中定义
-D3DUT.obj : error LNK2019: 无法解析的外部符号 _Direct3DCreate9@4，该符号在函数 "struct IDirect3D9 * __cdecl createIDirect3D9Object(int)" (?createIDirect3D9Object@@YAPAUIDirect3D9@@H@Z) 中被引用
-WinMain.obj : error LNK2019: 无法解析的外部符号 __imp__timeGetTime@0，该符号在函数 _WinMain@16 中被引用
-D:\Documents\GitHub\DirectX_study\D3D使用\Debug\D3D使用.exe : fatal error LNK1120: 2 个无法解析的外部命令
+  D3D使用.vcxproj -> D:\Documents\GitHub\DirectX_study\D3D使用\Debug\D3D使用.exe
+  D3D使用.vcxproj -> D:\Documents\GitHub\DirectX_study\D3D使用\Debug\D3D使用.pdb (Full PDB)

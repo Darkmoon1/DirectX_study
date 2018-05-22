@@ -2,9 +2,8 @@
 #ifndef __D3DUT_H__
 #define __D3DUT_H__
 #include <d3d9.h>
-
-
-HWND _hwnd;
+#endif
+static HWND _hwnd;
 
 IDirect3D9 * createIDirect3D9Object(int _d3dSdkVersion);
 
@@ -37,4 +36,3 @@ LRESULT  D3DWndProc(
 );
 
 
-#endif

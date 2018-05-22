@@ -1,6 +1,6 @@
 #pragma once
 
-#include "D3DUT.h"
+#include "MyD3D.h"
 #include <Windows.h>
 
 
@@ -13,20 +13,21 @@ lpCmdLIne 以空终止的字符串，指定传递给应用程序的命令行参数。
 nCmdLine 指定应用程序窗口的显示方式，如隐藏，最大化，最小哈等，其值作为ShowWindow函数的参数使用。
 */
 
-IDirect3DDevice9* Device = 0;
+//IDirect3DDevice9* Device = 0;
+MyD3D _device;
 
 int WINAPI WinMain(HINSTANCE hInstance,
 	HINSTANCE hPrevInstance,
 	LPSTR lpCmdLine,
 	int nCmdShow)
 {
-	int width = 480;
-	int height = 720;
+	int width = 720;
+	int height = 480;
 	bool windowed = true;
 
-	if (InitWindow(hInstance, width, height, windowed))
+	if (_device.CreateDevice(hInstance, width, height))
 	{
-		InitD3D(hInstance, width, height, windowed, D3DDEVTYPE_HAL, &Device);
+		_device.Initialize();
 	}
 
 	
@@ -55,27 +56,27 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		}
 		else
 		{
-			if (Device)
-			{
-				Device->Clear(0, 0, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, 0x00000000, 1.0f, 0);
+			//if (Device)
+			//{
+			//	Device->Clear(0, 0, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, 0x00000000, 1.0f, 0);
 
-				Device->Present(0, 0, 0, 0);
-			}
+			//	Device->Present(0, 0, 0, 0);
+			//}
 
 			float _currTime = (float)timeGetTime();
 			float _deltaTime = (_currTime - _lastTime)*0.001f;
 
-			/*
+			
 			_device.FrameMove(_deltaTime);
 			_device.Render();
 
-			*/
+			
 			_lastTime = _currTime;
 		}
 	}
 	//循环过程，如同游戏的实时渲染和过程
 
-	Device->Release();
+	_device.Release();
 	return 0;
 }
 
