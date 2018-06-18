@@ -52,10 +52,16 @@ bool MyD3D::Initialize()
 void MyD3D::FrameMove(float deltaTime)
 {
 	D3DXMatrixRotationY(& _m_y, _f_rot_y);
+	if (GetAsyncKeyState(VK_UP) & 0x8000f)
+	{
+		
+		D3DXMatrixTranslation(&_m_y,)
+	}
 
-	_f_rot_y += deltaTime;
-	if (_f_rot_y >= 6.28f)
-		_f_rot_y = 0.0f;
+	//_f_rot_y += deltaTime;
+	//if (_f_rot_y >= 6.28f)
+	//	_f_rot_y = 0.0f;
+
 }
 
 bool MyD3D::Render()
